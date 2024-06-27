@@ -2,6 +2,10 @@
 
 ## Setup (on fresh system)
 
+### Login as root
+
+Login as `root`, password is `voidlinux`
+
 ### WI-FI (skip if wired network is being used)
 
 ```sh
