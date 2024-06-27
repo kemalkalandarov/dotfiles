@@ -49,7 +49,7 @@ stow .
 ### Reboot
 
 ```sh
-reboot
+sudo reboot
 ```
 
 After reboot login as user, Hyprland desktop should start automatically.
