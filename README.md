@@ -6,23 +6,6 @@
 
 Login as `root`, password is `voidlinux`
 
-### WI-FI (skip if wired network is being used)
-
-```sh
-vim /etc/wpa_supplicant/wpa_supplicant.conf
-# ! don't forget to remove disabled=1
-# set name/password
-sv restart wpa_supplicant
-```
-
-### Expand disk (mmcblk1 is SD card)
-
-```sh
-cfdisk mmcblk1 
-# expand mmcblk1p2 disk size
-resize2fs /dev/mmcblk1p2
-```
-
 ### User
 
 ```sh
@@ -31,6 +14,23 @@ passwd kek
 # enter new password
 
 su kek # press 1 then q to skip .zshrc file creation, .zshrc should be symlinked from dotfiles. If you accidentally created .zshrc, just delete it.
+```
+
+### WI-FI (skip if wired network is being used)
+
+```sh
+sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
+# ! don't forget to remove disabled=1
+# set name/password
+sudo sv restart wpa_supplicant
+```
+
+### Expand disk (mmcblk1 is SD card)
+
+```sh
+sudo cfdisk mmcblk1 
+# expand mmcblk1p2 disk size
+sudo resize2fs /dev/mmcblk1p2
 ```
 
 ### Configs
@@ -49,7 +49,7 @@ stow .
 ### Reboot
 
 ```sh
-reboot
+sudo reboot
 ```
 
 After reboot login as user, Hyprland desktop should start automatically.
